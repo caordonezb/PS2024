@@ -7,3 +7,19 @@ GET     /                           controllers.HomeController.index()
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
+
+GET     /segmentos        controllers.SegmentoController.list
+POST    /segmentos        controllers.SegmentoController.create
+PUT     /segmentos/:id    controllers.SegmentoController.update(id: Long)
+DELETE  /segmentos/:id    controllers.SegmentoController.delete(id: Long)
+
+GET     /calzadas         controllers.CalzadaController.list
+POST    /calzadas         controllers.CalzadaController.create
+PUT     /calzadas/:id     controllers.CalzadaController.update(id: Long)
+DELETE  /calzadas/:id     controllers.CalzadaController.delete(id: Long)
+
+GET     /bordillos        controllers.BordilloController.list
+POST    /bordillos        controllers.BordilloController.create
+PUT     /bordillos/:id    controllers.BordilloController.update(id: Long)
+DELETE  /bordillos/:id    controllers.BordilloController.delete(id: Long)
+
